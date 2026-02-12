@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Club - Submission Received</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styleS.css">
+</head>
+<body>
+ 
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#" id="brandLogo">
+      <i class="bi bi-camera-fill me-2"></i>Photography Club
+    </a>
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html"><i class="bi bi-house-door me-1"></i> Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="gallery.html"><i class="bi bi-images me-1"></i> Gallery</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="about.html"><i class="bi bi-people me-1"></i> Our Team</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="join.html"><i class="bi bi-person-plus me-1"></i> Join Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contact.html"><i class="bi bi-envelope me-1"></i> Contact Us</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Social Bar -->
+<div class="social-bar">
+    <ul>
+        <li><a href="#" target="_blank" aria-label="TikTok"><i class="bi bi-tiktok"></i></a></li>
+        <li><a href="#" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a></li>
+        <li><a href="#" target="_blank" aria-label="Telegram"><i class="bi bi-telegram"></i></a></li>
+        <li><a href="#" target="_blank" aria-label="YouTube"><i class="bi bi-youtube"></i></a></li>
+    </ul>
+</div>
+
+<!-- Hero Banner -->
+<header class="jumbotron jumbotron-fluid text-center bg-light py-5">
+    <div class="container">
+        <h1 class="display-4">Thank You for Your Submission!</h1>
+        <p class="lead">We have received your message and will get back to you shortly.</p>
+    </div>
+</header>
+
+<!-- Form Result -->
+<main class="container my-5">
+    <div class="text-center">
+        <h2 class="section-heading fade-in">Submitted</h2>
+    </div>
+    <div class="card p-4">
+        <p><strong>Full Name:</strong> <span id="displayFullName"></span></p>
+        <p><strong>Email Address:</strong> <span id="displayEmail"></span></p>
+        <p><strong>Message:</strong> <span id="displayMessage"></span></p>
+    </div>
+    <div class="text-center mt-4">
+        <a href="index.html" class="btn btn-primary">Go back to Home</a>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+    <div class="container">
+        <p>© 2025 School Photography Club. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- Bootstrap + Custom Script -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get the URL parameters
+        const params = new URLSearchParams(window.location.search);
+        
+        // Set the content of the corresponding spans
+        document.getElementById('displayFullName').textContent = params.get('fullName') || 'N/A';
+        document.getElementById('displayEmail').textContent = params.get('email') || 'N/A';
+        document.getElementById('displayMessage').textContent = params.get('message') || 'N/A';
+    });
+</script>
+<script src="script.js"></script>
+</body>
+</html>
